@@ -1,14 +1,17 @@
 #include <string>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
 long long solution(long long n) {
     long long answer = 0;
-    int y = 0;
-    for(long long i = 1; y < n ;i++){
-        y = i*i;
-        answer = (n==y) ? (i+1)*(i+1) : -1;
+    long long a = sqrt(n);
+    if(a*a == n){
+        answer = (a+1)*(a+1);
+    }
+    else{
+        answer = -1;
     }
     return answer;
 }
