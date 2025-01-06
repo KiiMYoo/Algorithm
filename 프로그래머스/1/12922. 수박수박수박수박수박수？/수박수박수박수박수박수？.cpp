@@ -18,11 +18,7 @@ string solution(int n) {
     }
     else{
         for(int i = 0; i < s; i++){
-            answer += "수";
-            for(int j = 0; j < s; j++){
-                answer += "박";
-                break;
-            }
+            answer += "수박";
         }
     }
     return answer;
