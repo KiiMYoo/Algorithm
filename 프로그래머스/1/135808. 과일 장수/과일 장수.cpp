@@ -6,13 +6,12 @@ using namespace std;
 
 int solution(int k, int m, vector<int> score) {
     int answer = 0;
-    vector<int> OriginBox = score;
     int BoxCount = 0;
     int AppleCount = 0;
     int a = m;
         
-    BoxCount = OriginBox.size()/m;
-    sort(OriginBox.begin(), OriginBox.end(), greater<>());
+    BoxCount = score.size()/m;
+    sort(score.begin(), score.end(), greater<>());
     
     for(int i = 0; i < BoxCount; i++)
     {
@@ -20,7 +19,7 @@ int solution(int k, int m, vector<int> score) {
         
         while(AppleCount < a)
         {
-            Box.push_back(OriginBox[AppleCount]);
+            Box.push_back(score[AppleCount]);
             AppleCount++;
         }
         a += m;
