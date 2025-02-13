@@ -11,7 +11,6 @@ vector<int> solution(vector<string> keymap, vector<string> targets) {
         int LeastPushSum = 0;
         for(int i  = 0; i < targets[k].length(); i++)
         {
-            vector<int> Pushes;
             int LeastPush = 2147483647;
             for(int j = 0; j < keymap.size(); j++)
             {
