@@ -16,7 +16,6 @@ int solution(vector<int> ingredient) {
             stack[stack.size() - 2] == 3 &&
             stack[stack.size() - 1] == 1) {
             
-            // 패턴 발견 시 제거
             stack.erase(stack.end() - 4, stack.end());
             answer++;
         }
