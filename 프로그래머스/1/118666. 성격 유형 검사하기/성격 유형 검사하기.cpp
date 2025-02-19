@@ -7,7 +7,6 @@ using namespace std;
 string solution(vector<string> survey, vector<int> choices) {
     string answer = "";
     unordered_map<char, int> Personality = {{'R', 0}, {'T', 0}, {'C', 0}, {'F', 0}, {'J', 0}, {'M', 0}, {'A', 0}, {'N', 0}};
-    vector<int> Score = {3, 2, 1, 0, 1, 2, 3};
     
     for(int i = 0; i < choices.size(); i++)
     {
@@ -36,40 +35,10 @@ string solution(vector<string> survey, vector<int> choices) {
         }
     }
     
-    if(Personality['R'] >= Personality['T'])
-    {
-        answer += 'R';
-    }
-    else
-    {
-        answer += 'T';
-    }
+    answer += Personality['R'] >= Personality['T'] ? 'R' : 'T';
+    answer += Personality['C'] >= Personality['F'] ? 'C' : 'F';
+    answer += Personality['J'] >= Personality['M'] ? 'J' : 'M';
+    answer += Personality['A'] >= Personality['N'] ? 'A' : 'N';
     
-    if(Personality['C'] >= Personality['F'])
-    {
-        answer += 'C';
-    }
-    else
-    {
-        answer += 'F';
-    }
-    
-    if(Personality['J'] >= Personality['M'])
-    {
-        answer += 'J';
-    }
-    else
-    {
-        answer += 'M';
-    }
-    
-    if(Personality['A'] >= Personality['N'])
-    {
-        answer += 'A';
-    }
-    else
-    {
-        answer += 'N';
-    }
     return answer;
 }
